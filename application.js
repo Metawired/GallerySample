@@ -9,9 +9,9 @@ var galleries = require('./routes/galleries');
 var app = express();
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
-app.use('/', index);
-app.use('/galleries', users);
-app.use('/users', galleries);
+app.use('/api/', index);
+app.use('/api/galleries', users);
+app.use('/api/users', galleries);
 
 var mongoUrl =  process.env.FH_MONGODB_CONN_URL || 'mongodb://localhost:27017/gallery';
 mongoose.connect(mongoUrl);
