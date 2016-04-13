@@ -8,7 +8,7 @@ var gallerySchema = new Schema({
 	"mainImageUrl" : String,
 	"thumbnails" : Array,
 	"images" : Array,
-	"user" : {
+	"owner" : {
 	 	type: Schema.Types.ObjectId,
 	 	ref: 'user'
 	}
